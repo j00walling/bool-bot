@@ -3,13 +3,12 @@ from discord.ext import commands
 from discord import FFmpegPCMAudio
 import time
 import json
+import os
 
 # Bot Link
 # https://discord.com/api/oauth2/authorize?client_id=855685328558751744&permissions=8&scope=bot
 
-f = open('config.json', "r")
-config = json.loads(f.read())
-client = commands.Bot(command_prefix = config['prefix'])
+client = commands.Bot(command_prefix = "!")
 
 @client.event
 async def on_ready():
@@ -43,4 +42,4 @@ async def twang(ctx):
     else:
         await ctx.send("Join a voice channel first...nimrod")
 
-client.run(config['token'])
+client.run(os.environ['DISCORD_TOKEN'])
