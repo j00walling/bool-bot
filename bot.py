@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 from discord import FFmpegPCMAudio
 import time
-import json
 import os
 
 # Bot Link
