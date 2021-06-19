@@ -21,11 +21,10 @@ async def jun(ctx):
 @client.command(pass_context = True)
 async def bruh(ctx):
     if (ctx.author.voice):
-        await ctx.send('dsf')
         channel = ctx.message.author.voice.channel
         voice = await channel.connect()
         source = FFmpegPCMAudio('Bruh Sound Effect #2.mp3')
-        player = voice.play(source)
+        voice.play(source)
         time.sleep(1)
         await ctx.guild.voice_client.disconnect()
     else:
