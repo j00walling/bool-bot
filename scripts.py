@@ -41,4 +41,3 @@ async def twang(ctx):
         await ctx.send("Join a voice channel first...nimrod")
 
 
-client.run('ODU1Njg1MzI4NTU4NzUxNzQ0.YM2FEA.PYkdcUJiKb5P9N7PmKt6TcskItk')
