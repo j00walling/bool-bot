@@ -3,10 +3,13 @@ from discord.ext import commands
 from discord import FFmpegPCMAudio
 import time
 import os
+import json
 
 # Bot Link
 # https://discord.com/api/oauth2/authorize?client_id=855685328558751744&permissions=8&scope=bot
 
+f = open('config.json', "r")
+config = json.loads(f.read())
 client = discord.Client()
 client = commands.Bot(command_prefix = "!")
 
@@ -24,7 +27,7 @@ async def bruh(ctx):
         channel = ctx.message.author.voice.channel
         voice = await channel.connect()
         source = FFmpegPCMAudio('Bruh Sound Effect #2.mp3')
-        voice.play(source)
+        player = voice.play(source)
         time.sleep(1)
         await ctx.guild.voice_client.disconnect()
     else:
@@ -43,4 +46,5 @@ async def twang(ctx):
         await ctx.send("Join a voice channel first...nimrod")
 
 client.run(os.environ['DISCORD_TOKEN'])
+client.run(config['token'])
 
