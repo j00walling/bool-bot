@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 from discord import FFmpegPCMAudio
 import time
-import os
 import json
 
 # Bot Link
@@ -45,6 +44,5 @@ async def twang(ctx):
     else:
         await ctx.send("Join a voice channel first...nimrod")
 
-client.run(os.environ['DISCORD_TOKEN'])
 client.run(config['token'])
 
