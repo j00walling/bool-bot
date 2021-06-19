@@ -7,6 +7,7 @@ import os
 # Bot Link
 # https://discord.com/api/oauth2/authorize?client_id=855685328558751744&permissions=8&scope=bot
 
+client = discord.Client()
 client = commands.Bot(command_prefix = "!")
 
 @client.event
@@ -42,3 +43,4 @@ async def twang(ctx):
         await ctx.send("Join a voice channel first...nimrod")
 
 client.run(os.environ['DISCORD_TOKEN'])
+
