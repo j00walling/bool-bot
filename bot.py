@@ -26,8 +26,9 @@ async def bruh(ctx):
     if (ctx.author.voice):
         channel = ctx.message.author.voice.channel
         voice = await channel.connect()
-        source = FFmpegPCMAudio('Bruh Sound Effect #2.mp3')
-        player = voice.play(source)
+        # source = FFmpegPCMAudio('Bruh Sound Effect #2.mp3')
+        # player = 
+        voice.play(discord.FFmpegPCMAudio(executable="C:\Users\j00wa\Documents\Projects\bool-bot\ffmpeg.exe", source="Bruh Sound Effect #2.mp3"))
         time.sleep(1)
         await ctx.guild.voice_client.disconnect()
     else:
