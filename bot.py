@@ -27,7 +27,7 @@ async def bruh(ctx):
         channel = ctx.message.author.voice.channel
         voice = await channel.connect()
         source = FFmpegPCMAudio('Bruh Sound Effect #2.mp3')
-        player = voice.play(source)
+        voice.play(source)
         time.sleep(1)
         await ctx.guild.voice_client.disconnect()
     else:
@@ -39,7 +39,7 @@ async def twang(ctx):
         channel = ctx.message.author.voice.channel
         voice = await channel.connect()
         source = FFmpegPCMAudio('bool_down_young_loud_1.wav')
-        player = voice.play(source)
+        voice.play(source)
         time.sleep(5)
         await ctx.guild.voice_client.disconnect()
     else:
