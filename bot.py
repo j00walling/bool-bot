@@ -27,7 +27,7 @@ async def bruh(ctx):
         channel = ctx.message.author.voice.channel
         voice = await channel.connect()
         source = FFmpegPCMAudio('Bruh Sound Effect #2.mp3')
-        voice.play(source)
+        player = voice.play(source)
         time.sleep(1)
         await ctx.guild.voice_client.disconnect()
     else:
