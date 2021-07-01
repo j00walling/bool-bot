@@ -19,7 +19,7 @@ async def on_ready():
 
 @client.command()
 async def jun(ctx):
-    await ctx.send('Gay')
+    await ctx.send('Beautiful')
 
 @client.command(pass_context = True)
 async def bruh(ctx):
@@ -31,7 +31,7 @@ async def bruh(ctx):
         time.sleep(1)
         await ctx.guild.voice_client.disconnect()
     else:
-        await ctx.send("Join a voice channel first...nimrod")
+        await ctx.send("Join a voice channel first")
 
 @client.command(pass_context = True)
 async def twang(ctx):
@@ -43,7 +43,7 @@ async def twang(ctx):
         time.sleep(5)
         await ctx.guild.voice_client.disconnect()
     else:
-        await ctx.send("Join a voice channel first...nimrod")
+        await ctx.send("Join a voice channel first")
 
 @client.command(pass_context = True)
 async def fard(ctx):
@@ -55,7 +55,7 @@ async def fard(ctx):
         time.sleep(0.5)
         await ctx.guild.voice_client.disconnect()
     else:
-        await ctx.send("Join a voice channel first...nimrod")
+        await ctx.send("Join a voice channel first")
 
 client.run(os.environ['DISCORD_TOKEN'])
 # client.run(config['token'])
