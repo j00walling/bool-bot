@@ -57,6 +57,18 @@ async def fard(ctx):
     else:
         await ctx.send("Join a voice channel first")
 
+@client.command(pass_context = True)
+async def bruno(ctx):
+    if (ctx.author.voice):
+        channel = ctx.message.author.voice.channel
+        voice = await channel.connect()
+        source = FFmpegPCMAudio('bruno.m4a')
+        voice.play(source)
+        time.sleep(1)
+        await ctx.guild.voice_client.disconnect()
+    else:
+        await ctx.send("Join a voice channel first")
+
 client.run(os.environ['DISCORD_TOKEN'])
 # client.run(config['token'])
 
