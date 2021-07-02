@@ -64,7 +64,7 @@ async def bruno(ctx):
         voice = await channel.connect()
         source = FFmpegPCMAudio('bruno.m4a')
         voice.play(source)
-        time.sleep(1)
+        time.sleep(2)
         await ctx.guild.voice_client.disconnect()
     else:
         await ctx.send("Join a voice channel first")
